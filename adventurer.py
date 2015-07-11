@@ -5,6 +5,7 @@ ENEMY_STRENGTH = 5
 ENEMY_GOLD = 10
 ENEMY_XP = 10
 LEVEL_UP_XP = 100
+LEVEL_UP_STRENGTH = 2
 
 
 class Adventurer:
@@ -17,9 +18,10 @@ class Adventurer:
         self.equipment = []
         self.happiness = 50
         self.alive = True
+        self.lives = 3
 
     def __repr__(self):
-        return '{name} lvl({level}) str({strength}) ${money} xp({xp})'.format(
+        return '{name}]\tlvl({level})\tstr({strength})\t${money}\txp({xp})'.format(
             **self.__dict__)
 
     def update(self):
@@ -31,9 +33,12 @@ class Adventurer:
             print self.name, 'taking a break'
 
     def fight(self):
-        if randint(0, self.strength) < ENEMY_STRENGTH:
+        if randint(0, 20) + self.strength < randint(0, 20) + ENEMY_STRENGTH:
             print self.name, 'fought enemy and lost!'
-            self.alive = False
+            self.lives -= 1
+            if self.lives == 0:
+                print self.name, 'died!'
+                self.alive = False
         else:
             print self.name, 'fought enemy and won!'
             self.money += ENEMY_GOLD
@@ -44,3 +49,5 @@ class Adventurer:
         if self.xp > LEVEL_UP_XP:
             self.level += 1
             print '{name} grew to level {level}!'.format(**self.__dict__)
+            self.xp -= LEVEL_UP_XP
+            self.strength += LEVEL_UP_STRENGTH
