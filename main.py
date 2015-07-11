@@ -15,10 +15,15 @@ def main():
     while day <= totalNumberOfDays:
         print "Day:", day, ", Turn:", turn
         print "The adventurers are:", adventurers
+        for a in adventurers:
+            a.update()
+        adventurers = [a for a in adventurers if a.alive]
+        # Add more adventurers
+        adventurers.append(Adventurer("Fred" + str(day) + str(turn)))
         inp = raw_input("Press enter to go to next turn")
         print inp
         turn += 1
-        if (turn > turnsPerDay):
+        if turn > turnsPerDay:
             turn = 1
             day += 1
 
