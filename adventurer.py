@@ -18,6 +18,7 @@ class Adventurer:
         self.equipment = []
         self.happiness = 50
         self.alive = True
+        self.lives = 3
 
     def __repr__(self):
         return '{name}]\tlvl({level})\tstr({strength})\t${money}\txp({xp})'.format(
@@ -34,7 +35,10 @@ class Adventurer:
     def fight(self):
         if randint(0, 20) + self.strength < randint(0, 20) + ENEMY_STRENGTH:
             print self.name, 'fought enemy and lost!'
-            self.alive = False
+            self.lives -= 1
+            if self.lives == 0:
+                print self.name, 'died!'
+                self.alive = False
         else:
             print self.name, 'fought enemy and won!'
             self.money += ENEMY_GOLD
