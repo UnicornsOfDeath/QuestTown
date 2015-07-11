@@ -26,13 +26,13 @@ def main():
     # Add some areas
     def addArea(area):
         areas[area.name] = area
-    addArea(Area("Field", 4, 4, 3))
-    addArea(Area("Swamp", 5, 10, 10))
-    addArea(Area("Mountain", 6, 20, 30))
+    addArea(Area("Field", 2, 4, 3))
+    addArea(Area("Swamp", 5, 30, 30))
+    addArea(Area("Mountain", 10, 60, 90))
 
     # Add some adventurers
-    adventurers.append(Adventurer("Crono", 1, areas))
-    adventurers.append(Adventurer("Red", 1, areas))
+    adventurers.append(Adventurer("Crono", 1))
+    adventurers.append(Adventurer("Red", 1))
 
     buildings.append(Shop("Ye Old Weapon Shop"))
     buildings.append(Inn("Le Pube"))
@@ -64,8 +64,7 @@ def main():
             # Adventurer level depends on town level
             level = randint(1, townLevel)
             adventurers.append(Adventurer("Fred" + str(day) + str(turn),
-                                          level,
-                                          areas))
+                                          level))
 
     print "Shit bro.... Your village is burning, your maidens are raped and your children are murdered"
     def chunks(l, n):
@@ -84,6 +83,8 @@ def main():
             for level in range(1, max(levelsDay) + 1):
                 levelCounts.append(str(levelsDay.count(level)))
             print ', '.join(levelCounts)
+
+    print 'Town is at level', townLevel
 
 
 

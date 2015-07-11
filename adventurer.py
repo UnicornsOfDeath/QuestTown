@@ -4,13 +4,15 @@ from random import randint
 LEVEL_UP_XP = 100
 LEVEL_UP_STRENGTH = 2
 LEVEL_UP_XP_GROWTH_FACTOR = 1.5
+LIVES = 3
 
 
 class Adventurer:
-    def __init__(self, name, level, areas):
+    def __init__(self, name, level):
         self.name = name
         self.strength = 10
         self.money = 100
+        self.lives = LIVES
         self.xp = 0
         self.lastLevelXP = 0
         self.xpForNextLevel = LEVEL_UP_XP
@@ -21,11 +23,6 @@ class Adventurer:
         self.equipment = []
         self.happiness = 50
         self.alive = True
-        self.lives = 3
-        # How much this adventurer likes going to areas
-        self.areaLikes = {}
-        for area in areas:
-            self.areaLikes[area] = 5
 
     def __repr__(self):
         return '{name}\tlvl({level})\tstr({strength})\t${money}\txp({xp})'.format(
@@ -35,31 +32,27 @@ class Adventurer:
         choice = randint(0, 9)
         if 0 <= choice <= 5:
             print self.name, 'wants to fight!'
-            # Select a random area based on likes
-            likeSum = sum([self.areaLikes[area] for area in self.areaLikes])
+            # Select a random area based on relative strength
+            likes = {}
+            likeSum = 0
+            for k in areas:
+                diff = abs(self.strength - 8 - areas[k].enemyStrength)
+                likeAmount = max([0, 20 - diff])
+                likes[k] = likeAmount
+                likeSum += likeAmount
             choice = randint(0, likeSum)
             choiceCounter = 0
-            for area in self.areaLikes:
-                if choiceCounter <= choice < choiceCounter + self.areaLikes[area]:
-                    self.fight(areas[area])
-                choiceCounter += self.areaLikes[area]
+            for k in likes:
+                if choiceCounter <= choice < choiceCounter + likes[k]:
+                    self.fight(areas[k])
+                choiceCounter += likes[k]
         else:
             print self.name, 'taking a break'
-
-        # Reversion around mean for likes
-        for area in self.areaLikes:
-            if self.areaLikes[area] < 5:
-                self.areaLikes[area] += 1
-            elif self.areaLikes[area] > 5:
-                self.areaLikes[area] -= 1
-        print self.name, 'likes areas', self.areaLikes
 
     def fight(self, area):
         if randint(0, 20) + self.strength < randint(0, 20) + area.enemyStrength:
             print self.name, 'fought enemy and lost!'
             self.lives -= 1
-            # Really don't like this area
-            self.areaLikes[area.name] -= 5
             if self.lives == 0:
                 print self.name, 'died!'
                 self.alive = False
@@ -67,8 +60,6 @@ class Adventurer:
             print self.name, 'fought enemy and won!'
             self.money += area.enemyGold
             self.addXP(area.enemyXP)
-            # Love this area
-            self.areaLikes[area.name] += 3
 
     def addXP(self, xp):
         self.xp += xp
@@ -81,3 +72,4 @@ class Adventurer:
         self.lastLevelXP += self.xpForNextLevel
         self.xpForNextLevel *= LEVEL_UP_XP_GROWTH_FACTOR
         self.strength += LEVEL_UP_STRENGTH
+        self.lives = LIVES
