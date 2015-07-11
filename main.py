@@ -18,9 +18,10 @@ def main():
 
     townLevel = 1
     townXP = 0
-    townLevelUpXP = 100
-    # XP to level up to next, to the power of
-    levelUpXPGrowthPower = 1.5
+    townLastLevelXP = 0
+    townXPForNextLevel = 1000
+    # XP to level up to next, as multiplier
+    TOWN_LEVEL_UP_XP_GROWTH_FACTOR = 1.5
 
     # Add some areas
     def addArea(area):
@@ -46,9 +47,10 @@ def main():
         # Town gains xp for every adventurer
         for a in adventurers:
             townXP += a.level * 10
-            if townXP > townLevelUpXP:
+            if townXP > townLastLevelXP + townXPForNextLevel:
                 townLevel += 1
-                townLevelUpXP **= levelUpXPGrowthPower
+                townLastLevelXP += townXPForNextLevel
+                townXPForNextLevel *= TOWN_LEVEL_UP_XP_GROWTH_FACTOR
                 print 'Town leveled up to', townLevel
         if turn > turnsPerDay:
             turn = 1

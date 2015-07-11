@@ -3,6 +3,7 @@ from random import randint
 
 LEVEL_UP_XP = 100
 LEVEL_UP_STRENGTH = 2
+LEVEL_UP_XP_GROWTH_FACTOR = 1.5
 
 
 class Adventurer:
@@ -10,9 +11,13 @@ class Adventurer:
         self.name = name
         self.strength = 10
         self.money = 100
-        # TODO: proper xp curves
-        self.xp = (level - 1) * LEVEL_UP_XP
-        self.level = level
+        self.xp = 0
+        self.lastLevelXP = 0
+        self.xpForNextLevel = LEVEL_UP_XP
+        self.level = 1
+        for i in range(1, level):
+            self.xp += self.xpForNextLevel
+            self.levelUp()
         self.equipment = []
         self.happiness = 50
         self.alive = True
@@ -67,8 +72,12 @@ class Adventurer:
 
     def addXP(self, xp):
         self.xp += xp
-        if self.xp > LEVEL_UP_XP:
-            self.level += 1
+        if self.xp > self.lastLevelXP + self.xpForNextLevel:
+            self.levelUp()
             print '{name} grew to level {level}!'.format(**self.__dict__)
-            self.xp -= LEVEL_UP_XP
-            self.strength += LEVEL_UP_STRENGTH
+
+    def levelUp(self):
+        self.level += 1
+        self.lastLevelXP += self.xpForNextLevel
+        self.xpForNextLevel *= LEVEL_UP_XP_GROWTH_FACTOR
+        self.strength += LEVEL_UP_STRENGTH
