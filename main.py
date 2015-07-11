@@ -18,14 +18,18 @@ def main():
         for a in adventurers:
             a.update()
         adventurers = [a for a in adventurers if a.alive]
-        # Add more adventurers
-        adventurers.append(Adventurer("Fred" + str(day) + str(turn)))
-        inp = raw_input("Press enter to go to next turn")
-        print inp
+
+        #print "1. Build Building"
+        #print "2. Upgrade Building"
+        #print "3. Give Quest to Hero"
+
+        inp = raw_input("Press Enter to continue")
+        #print inp
         turn += 1
         if turn > turnsPerDay:
             turn = 1
             day += 1
+            adventurers.append(Adventurer("Fred" + str(day) + str(turn)))
 
     print "Shit bro.... Your village is burning, your maidens are raped and your children are murdered"
 
