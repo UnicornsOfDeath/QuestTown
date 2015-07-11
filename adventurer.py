@@ -6,12 +6,13 @@ LEVEL_UP_STRENGTH = 2
 
 
 class Adventurer:
-    def __init__(self, name, areas):
+    def __init__(self, name, level, areas):
         self.name = name
         self.strength = 10
         self.money = 100
-        self.xp = 0
-        self.level = 1
+        # TODO: proper xp curves
+        self.xp = (level - 1) * LEVEL_UP_XP
+        self.level = level
         self.equipment = []
         self.happiness = 50
         self.alive = True

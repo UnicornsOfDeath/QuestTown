@@ -1,6 +1,7 @@
 from adventurer import Adventurer
 from building import Building
 from area import Area
+from random import randint
 
 
 def main():
@@ -15,6 +16,12 @@ def main():
     areas = {}
     buildings = []
 
+    townLevel = 1
+    townXP = 0
+    townLevelUpXP = 100
+    # XP to level up to next, to the power of
+    levelUpXPGrowthPower = 1.5
+
     # Add some areas
     def addArea(area):
         areas[area.name] = area
@@ -23,8 +30,8 @@ def main():
     addArea(Area("Mountain", 6, 20, 30))
 
     # Add some adventurers
-    adventurers.append(Adventurer("Crono", areas))
-    adventurers.append(Adventurer("Red", areas))
+    adventurers.append(Adventurer("Crono", 1, areas))
+    adventurers.append(Adventurer("Red", 1, areas))
 
     buildings.append(Building("Ye Old Weapon", "Weapons"))
 
@@ -36,13 +43,23 @@ def main():
         adventurers = [a for a in adventurers if a.alive]
         adventurersPerTurn.append(len(adventurers))
         turn += 1
+        # Town gains xp for every adventurer
+        for a in adventurers:
+            townXP += a.level * 10
+            if townXP > townLevelUpXP:
+                townLevel += 1
+                townLevelUpXP **= levelUpXPGrowthPower
+                print 'Town leveled up to', townLevel
         if turn > turnsPerDay:
             turn = 1
             day += 1
             # Summarise levels
             adventurerLevelsDay.append([a.level for a in adventurers])
             # Add more adventurers
+            # Adventurer level depends on town level
+            level = randint(1, townLevel)
             adventurers.append(Adventurer("Fred" + str(day) + str(turn),
+                                          level,
                                           areas))
 
     print "Shit bro.... Your village is burning, your maidens are raped and your children are murdered"
