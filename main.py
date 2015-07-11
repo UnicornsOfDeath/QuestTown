@@ -1,5 +1,4 @@
 from adventurer import Adventurer
-from area import Area
 
 
 def main():
@@ -12,6 +11,7 @@ def main():
     # List of adventurer levels at the end of each day
     adventurerLevelsDay = []
     areas = {}
+    buildings = []
 
     # Add some areas
     def addArea(area):
