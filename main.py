@@ -8,6 +8,7 @@ def main():
     turn = 1
     adventurers = []
     adventurersPerTurn = []
+    buildings = []
 
     # Add some adventurers
     adventurers.append(Adventurer("Crono"))
