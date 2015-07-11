@@ -19,23 +19,21 @@ def main():
         for a in adventurers:
             a.update()
         adventurers = [a for a in adventurers if a.alive]
-        #inp = raw_input("Press enter to go to next turn")
-        #print inp
-
-        #print "1. Build Building"
-        #print "2. Upgrade Building"
-        #print "3. Give Quest to Hero"
-        #print inp
+        adventurersPerTurn.append(len(adventurers))
         turn += 1
         if turn > turnsPerDay:
             turn = 1
             day += 1
             # Add more adventurers
             adventurers.append(Adventurer("Fred" + str(day) + str(turn)))
-        adventurersPerTurn.append(len(adventurers))
 
     print "Shit bro.... Your village is burning, your maidens are raped and your children are murdered"
-    print adventurersPerTurn
+    def chunks(l, n):
+        """Yield successive n-sized chunks from l."""
+        for i in xrange(0, len(l), n):
+            yield l[i:i+n]
+    import pprint
+    pprint.pprint(list(chunks(adventurersPerTurn, turnsPerDay)))
 
 
 
