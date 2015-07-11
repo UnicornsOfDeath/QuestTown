@@ -1,5 +1,5 @@
 from adventurer import Adventurer
-from building import Building
+from building import *
 from area import Area
 from random import randint
 
@@ -34,10 +34,13 @@ def main():
     adventurers.append(Adventurer("Crono", 1, areas))
     adventurers.append(Adventurer("Red", 1, areas))
 
-    buildings.append(Building("Ye Old Weapon", "Weapons"))
+    buildings.append(Shop("Ye Old Weapon Shop"))
+    buildings.append(Inn("Le Pube"))
+    buildings.append(Tavern("We won't watch you sleep"))
 
     while day <= totalNumberOfDays:
         print "Day:", day, ", Turn:", turn
+        print "The Buildings are:", buildings
         print "The adventurers are:", adventurers
         for a in adventurers:
             a.update(areas)

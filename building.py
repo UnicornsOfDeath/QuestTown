@@ -1,8 +1,19 @@
 class Building:
-    def __init__(self, name, type):
+    def __init__(self, name):
         self.name = name
-        self.type = type
-
 
     def __repr__(self):
-        return '{name}\t{type}'
+        return '{name}'.format(
+            **self.__dict__)
+
+class Shop(Building):
+    def __init__(self, name):
+        self.name = name
+
+class Inn(Building):
+    def __init__(self, name):
+        self.name = name
+
+class Tavern(Building):
+    def __init__(self, name):
+        self.name = name
