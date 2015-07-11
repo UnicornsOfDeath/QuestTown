@@ -1,4 +1,6 @@
 from adventurer import Adventurer
+from building import Building
+from area import Area
 
 
 def main():
@@ -23,6 +25,8 @@ def main():
     # Add some adventurers
     adventurers.append(Adventurer("Crono", areas))
     adventurers.append(Adventurer("Red", areas))
+
+    buildings.append(Building("Ye Old Weapon", "Weapons"))
 
     while day <= totalNumberOfDays:
         print "Day:", day, ", Turn:", turn

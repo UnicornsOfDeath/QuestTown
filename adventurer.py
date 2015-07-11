@@ -22,7 +22,7 @@ class Adventurer:
             self.areaLikes[area] = 5
 
     def __repr__(self):
-        return '{name}]\tlvl({level})\tstr({strength})\t${money}\txp({xp})'.format(
+        return '{name}\tlvl({level})\tstr({strength})\t${money}\txp({xp})'.format(
             **self.__dict__)
 
     def update(self, areas):
