@@ -19,14 +19,12 @@ def main():
         for a in adventurers:
             a.update()
         adventurers = [a for a in adventurers if a.alive]
-        inp = raw_input("Press enter to go to next turn")
-        print inp
+        #inp = raw_input("Press enter to go to next turn")
+        #print inp
 
         #print "1. Build Building"
         #print "2. Upgrade Building"
         #print "3. Give Quest to Hero"
-
-        inp = raw_input("Press Enter to continue")
         #print inp
         turn += 1
         if turn > turnsPerDay:
