@@ -1,5 +1,17 @@
 # Starting towns in various RPGs #
 
+This document looks at starting towns in various RPGs. The purpose is to see what buildings these towns typically have, so we can come up with a minimum set of key buildings for a prototype/MVP.
+
+### Why no Pallet Town / Narshe? ###
+
+These towns usually have the player leaving and not returning repeatedly, since they don't have useful amenities. We want to look for examples of towns that are small and simple, but have enough amenities to act as a minor hub - where adventurers return to restock.
+
+### Why no Athkatla? ###
+
+These towns are too big.
+
+### Further reading ###
+
 http://tvtropes.org/pmwiki/pmwiki.php/Main/FirstTown
 
 ## Pokemon: Viridian City ##
