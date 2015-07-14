@@ -1,5 +1,7 @@
 # Starting towns in various RPGs #
 
+http://tvtropes.org/pmwiki/pmwiki.php/Main/FirstTown
+
 ## Pokemon: Viridian City ##
 
 ![](pokemon_viridian_city.png)
