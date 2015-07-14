@@ -50,7 +50,7 @@ http://tvtropes.org/pmwiki/pmwiki.php/Main/FirstTown
 
 ## Final Fantasy 4: Baron ##
 
-![](ff4_baron.png)
+[![](ff4_baron.png)](ff4_baron_large.jpg)
 
 - **Buildings**
 	- inn/tavern
@@ -92,6 +92,31 @@ http://tvtropes.org/pmwiki/pmwiki.php/Main/FirstTown
     ---------------------------------
 
 - **Buildings**
-	- general store (gen)
+	- shop (gen)
 	- item shop (fd)
 	- equipment shop x2 (too, lgt)
+
+## Diablo 2: Rogue Encampment ##
+
+![](diablo2_rogue_encampment.jpg)
+
+An unusual setup; Diablo 2 is more about NPCs than shops. Furthermore, all NPCs give useful quest advice, which is why they are also "schools".
+
+In Diablo 2 one can also hire mercenaries, which acts as a "tavern".
+
+Item identification is a Western RPG concept, loosely categorised as an "item shop" here.
+
+- **Buildings**
+	- inn/shop/school (Ankara)
+	- equipment shop/school (Charsi)
+	- shop/school (Gheed)
+	- tavern/school (Kashya)
+	- school (Warriv)
+	- item shop/school (Deckard Cain)
+	- **Totals**
+		- inn
+		- shop x2
+		- equipment shop
+		- item shop
+		- tavern
+		- school x6
