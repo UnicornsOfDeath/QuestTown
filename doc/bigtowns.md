@@ -2,40 +2,47 @@
 
 The purpose is to get ideas for unique and special buildings, to see what makes these large towns interesting without just being a scaled-up version of a small town.
 
-### List of special buildings ###
+### Special buildings and subtypes ###
 
-- **barracks**: super school and tavern
-- **estate**: super house and tavern
-- **guild**: faction-based super school; can send adventurers on quests that you don't set
-- **prison**: where bad adventurers are kept; possibly bailed by other adventurers at cost, or sent on quests for free. Requires police force.
-- **temple**: faction-based super school and inn; improves happiness and length of stay for converted adventurers
-
-### Building subtypes ###
-
-- arena (adventurers can fight each other and/or monsters)
+- arena (adventurers can fight each other and/or monsters, spectators bet and the town collects commission)
+- barracks (super school and tavern)
+- delivery (various transit services; TODO: mechanics)
+  - newspapers (delivers notices; TODO: mechanics)
 - den (normal building that was taken over by an evil entity, must be restored by questing adventurers)
   - crypt (undead)
   - dungeon (combat)
   - illusion (mage specialty)
   - trap (thief specialty)
-- guild
+- guild (faction-based super school; can send adventurers on quests that you don't set)
   - fighters
   - mages
   - thieves (improves intel, can increase number of thieves in town!)
+  - university (super mage guild)
+- house
+  - estate (super house and tavern)
 - inn
   - hotel (for rich people)
-- prison
+- monument (increases prestige of town, by improving happiness of all adventurers passing by)
+- prison (where bad adventurers are kept; possibly bailed by other adventurers at cost, or sent on quests for free. Requires police force.)
   - magical (for mages)
+- school
+  - library
+  - observatory
 - shop
+  - armour
+  - crafting (sells crafting-related items; TODO: crafting mechanics)
   - mart (sells everything)
   - magic
+  - pawn (buys and sells everything; TODO: mechanics of buying from adventurers)
   - stall (very basic, less space taken but no seating, limited stock)
   - tanner (leather armour)
-  - temple
+  - weapon
+- station (for fast travel, opens up special areas and collect tolls from adventurers)
+  - docks
+- temple (faction-based super school and inn; improves happiness and length of stay for converted adventurers)
 
 ## Baldur's Gate 2: Athkatla ##
 
-**Areas**
 - Bridge
   - estate x2
   - house
@@ -80,3 +87,43 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - mart
   - shop x3
   - stall
+
+## Oblivion: Imperial City ##
+
+- Arcane University
+  - library
+  - mages guild (university)
+  - observatory
+- Arboretum
+  - monument x9
+- Arena
+  - arena
+  - monument x2
+- Elven Gardens
+  - house
+  - inn/tavern x2
+- Imperial Legion Compound
+  - barracks
+  - prison
+- Market
+  - armour shop
+  - crafting shop x2
+  - monument x2
+  - magic shop
+  - mart x2
+  - newspapers
+  - pawn shop
+  - weapon shop
+- Palace
+  - quest x2
+- Talos Plaza
+  - estate
+  - hotel
+  - house
+  - monument
+- Temple
+  - inn/tavern
+  - temple
+- Waterfront
+  - dock
+  - thieves guild
