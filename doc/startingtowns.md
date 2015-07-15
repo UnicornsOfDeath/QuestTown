@@ -107,16 +107,28 @@ In Diablo 2 one can also hire mercenaries, which acts as a "tavern".
 Item identification is a Western RPG concept, loosely categorised as an "item shop" here.
 
 - **Buildings**
-	- inn/shop/school (Ankara)
+	- inn/shop/school/hall (Ankara)
 	- equipment shop/school (Charsi)
 	- shop/school (Gheed)
 	- tavern/school (Kashya)
 	- school (Warriv)
 	- item shop/school (Deckard Cain)
 	- **Totals**
+		- hall
 		- inn
 		- shop x2
 		- equipment shop
 		- item shop
 		- tavern
 		- school x6
+
+## Shining Force 2: Granseal ##
+
+[![](sf2_granseal.png)](sf2_granseal_large.gif)
+
+- **Buildings**
+	- house x5
+	- school
+	- shop
+	- hall (castle)
+	- inn (church)
