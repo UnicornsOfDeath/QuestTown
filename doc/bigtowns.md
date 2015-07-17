@@ -6,6 +6,8 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
 
 - arena (adventurers can fight each other and/or monsters, spectators bet and the town collects commission)
 - barracks (super school and tavern)
+- cemetary (school for priests, tavern for necromancers)
+  - mortuary (advanced cemetary)
 - delivery (various transit services; TODO: mechanics)
   - newspapers (delivers notices; TODO: mechanics)
 - den (normal building that was taken over by an evil entity, must be restored by questing adventurers)
@@ -36,6 +38,7 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - pawn (buys and sells everything; TODO: mechanics of buying from adventurers)
   - stall (very basic, less space taken but no seating, limited stock)
   - tanner (leather armour)
+  - tattoo parlour (accessories)
   - weapon
 - station (for fast travel, opens up special areas and collect tolls from adventurers)
   - docks
@@ -127,3 +130,29 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
 - Waterfront
   - dock
   - thieves guild
+
+## Planescape Torment: Sigil
+
+- The Hive
+  - Alley of Dangerous Angles
+      - house
+      - dungeon x2
+  - Marketplace
+      - house/dungeon
+  	  - item shop
+  	  - magic shop
+      - weapon shop
+  - Mortuary
+	  - house x2
+	  - monument
+	  - mortuary x2
+	  - tavern
+  - inn
+  - Ragpicker's Square
+      - house x4
+      - mage school/shop/inn
+      - school
+  - Smouldering Corpse
+      - house x2
+  	  - tattoo parlour
+  	  - tavern
