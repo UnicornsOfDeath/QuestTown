@@ -5,7 +5,9 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
 ### Special buildings and subtypes ###
 
 - arena (adventurers can fight each other and/or monsters, spectators bet and the town collects commission)
+- bank (loans? deposits?)
 - barracks (super school and tavern)
+- casino (gambling, possibly tavern/food services)
 - cemetary (school for priests, tavern for necromancers)
   - mortuary (advanced cemetary)
 - delivery (various transit services; TODO: mechanics)
@@ -14,6 +16,7 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - crypt (undead)
   - dungeon (combat)
   - illusion (mage specialty)
+  - sewer (monsters)
   - trap (thief specialty)
 - guild (faction-based super school; can send adventurers on quests that you don't set)
   - fighters
@@ -23,16 +26,26 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
 - house
   - estate (super house and tavern)
 - inn
+  - hospital (heal status effects, sell items)
   - hotel (for rich people)
 - monument (increases prestige of town, by improving happiness of all adventurers passing by)
+  - statue (of famous adventurers? of gods)
 - prison (where bad adventurers are kept; possibly bailed by other adventurers at cost, or sent on quests for free. Requires police force.)
+  - dungeon (advanced)
   - magical (for mages)
+- quest
+  - castle
+  - town hall
 - school
   - library
   - observatory
 - shop
   - armour
+  - book store (sells skill-enhancing books)
   - crafting (sells crafting-related items; TODO: crafting mechanics)
+  - food (healing)
+  - herbalist (alchemy/crafting)
+  - jeweller (expensive accessories)
   - mart (sells everything)
   - magic
   - pawn (buys and sells everything; TODO: mechanics of buying from adventurers)
@@ -40,8 +53,11 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - tanner (leather armour)
   - tattoo parlour (accessories)
   - weapon
+  - workshop (low quality equipment)
 - station (for fast travel, opens up special areas and collect tolls from adventurers)
   - docks
+- tavern
+  - brothel
 - temple (faction-based super school and inn; improves happiness and length of stay for converted adventurers)
 
 ## Baldur's Gate 2: Athkatla ##
@@ -156,3 +172,43 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
       - house x2
   	  - tattoo parlour
   	  - tavern
+
+## The Witcher: Vizima
+
+- Temple
+  - book store
+  - brothel
+  - casino
+  - cemetary
+  - dungeon
+  - equipment shop
+  - estate x2
+  - food shop
+  - herbalist
+  - hospital
+  - house x4
+  - inn
+  - jeweller
+  - statue
+  - temple
+- Trade
+  - bank
+  - barracks
+  - book store
+  - brothel
+  - casino
+  - craft store x2
+  - equipment store x3
+  - estate
+  - food store x4
+  - herbalist
+  - hotel
+  - house
+  - jeweller
+  - mart x2
+  - statue
+  - town hall
+  - workshop
+- crypt
+- sewer
+- castle
