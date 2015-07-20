@@ -18,6 +18,7 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - illusion (mage specialty)
   - sewer (monsters)
   - trap (thief specialty)
+- greeter/bulletin board (auto quests?)
 - guild (faction-based super school; can send adventurers on quests that you don't set)
   - fighters
   - mages
@@ -49,6 +50,8 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
   - mart (sells everything)
   - magic
   - pawn (buys and sells everything; TODO: mechanics of buying from adventurers)
+  - pharmacy (healing)
+  - stables (mounts, pack animals)
   - stall (very basic, less space taken but no seating, limited stock)
   - tanner (leather armour)
   - tattoo parlour (accessories)
@@ -212,3 +215,24 @@ The purpose is to get ideas for unique and special buildings, to see what makes 
 - crypt
 - sewer
 - castle
+
+## Fallout 2: New Reno
+
+- Chop Shop
+  - stables
+- East Side
+  - estate
+- Second Street
+  - arena
+  - casino
+  - guild
+  - tavern/quest
+- Virgin Street
+  - brothel
+  - casino/guild
+  - greeter
+  - house
+- West Side
+  - equipment shop
+  - pharmacy
+  - temple
