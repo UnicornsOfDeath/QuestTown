@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from adventurer import Adventurer
 from building import *
 from area import Area
@@ -40,8 +42,8 @@ def main():
 
     while day <= totalNumberOfDays:
         print "Day:", day, ", Turn:", turn
-        print "The Buildings are:", buildings
-        print "The adventurers are:", adventurers
+        #print "The Buildings are:", buildings
+        #print "The adventurers are:", adventurers
         for a in adventurers:
             a.update(areas)
         adventurers = [a for a in adventurers if a.alive]
@@ -86,6 +88,13 @@ def main():
 
     print 'Town is at level', townLevel
 
+    print 'Area counters'
+    for name, area in areas.iteritems():
+        print name, area.usedCounter
+
+    print 'Number of adventurers', len(adventurers)
+    print 'Average adventurer level',\
+        sum([a.level for a in adventurers]) * 1.0 / len(adventurers)
 
 
 if __name__ == "__main__":

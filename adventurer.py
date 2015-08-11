@@ -50,6 +50,7 @@ class Adventurer:
             print self.name, 'taking a break'
 
     def fight(self, area):
+        area.usedCounter += 1
         if randint(0, 20) + self.strength < randint(0, 20) + area.enemyStrength:
             print self.name, 'fought enemy and lost!'
             self.lives -= 1

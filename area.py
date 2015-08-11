@@ -4,3 +4,6 @@ class Area:
         self.enemyStrength = enemyStrength
         self.enemyGold = enemyGold
         self.enemyXP = enemyXP
+
+        # Counter for how many times area used
+        self.usedCounter = 0
