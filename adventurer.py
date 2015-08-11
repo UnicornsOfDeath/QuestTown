@@ -1,4 +1,4 @@
-from random import randint
+from random import choice, randint
 
 
 LEVEL_UP_XP = 100
@@ -29,36 +29,25 @@ class Adventurer:
             **self.__dict__)
 
     def update(self, areas):
-        choice = randint(0, 9)
-        if 0 <= choice <= 5:
-            print self.name, 'wants to fight!'
-            # Select a random area based on relative strength
-            likes = {}
-            likeSum = 0
-            for k in areas:
-                diff = abs(self.strength - 8 - areas[k].enemyStrength)
-                likeAmount = max([0, 20 - diff])
-                likes[k] = likeAmount
-                likeSum += likeAmount
-            choice = randint(0, likeSum)
-            choiceCounter = 0
-            for k in likes:
-                if choiceCounter <= choice < choiceCounter + likes[k]:
-                    self.fight(areas[k])
-                choiceCounter += likes[k]
+        c = randint(0, 9)
+        if 0 <= c <= 5:
+            #print self.name, 'wants to fight!'
+            # Select a random area
+            self.fight(areas[choice(areas.keys())])
         else:
-            print self.name, 'taking a break'
+            #print self.name, 'taking a break'
+            pass
 
     def fight(self, area):
         area.usedCounter += 1
         if randint(0, 20) + self.strength < randint(0, 20) + area.enemyStrength:
-            print self.name, 'fought enemy and lost!'
+            #print self.name, 'fought enemy and lost!'
             self.lives -= 1
             if self.lives == 0:
-                print self.name, 'died!'
+                #print self.name, 'died!'
                 self.alive = False
         else:
-            print self.name, 'fought enemy and won!'
+            #print self.name, 'fought enemy and won!'
             self.money += area.enemyGold
             self.addXP(area.enemyXP)
 
@@ -66,7 +55,7 @@ class Adventurer:
         self.xp += xp
         if self.xp > self.lastLevelXP + self.xpForNextLevel:
             self.levelUp()
-            print '{name} grew to level {level}!'.format(**self.__dict__)
+            #print '{name} grew to level {level}!'.format(**self.__dict__)
 
     def levelUp(self):
         self.level += 1

@@ -28,9 +28,9 @@ def main():
     # Add some areas
     def addArea(area):
         areas[area.name] = area
-    addArea(Area("Field", 2, 4, 3))
-    addArea(Area("Swamp", 5, 30, 30))
-    addArea(Area("Mountain", 10, 60, 90))
+    addArea(Area("Field", 15))
+    #addArea(Area("Swamp", 5))
+    #addArea(Area("Mountain", 10))
 
     # Add some adventurers
     adventurers.append(Adventurer("Crono", 1))
@@ -41,7 +41,7 @@ def main():
     buildings.append(Tavern("We won't watch you sleep"))
 
     while day <= totalNumberOfDays:
-        print "Day:", day, ", Turn:", turn
+        #print "Day:", day, ", Turn:", turn
         #print "The Buildings are:", buildings
         #print "The adventurers are:", adventurers
         for a in adventurers:
@@ -56,7 +56,7 @@ def main():
                 townLevel += 1
                 townLastLevelXP += townXPForNextLevel
                 townXPForNextLevel *= TOWN_LEVEL_UP_XP_GROWTH_FACTOR
-                print 'Town leveled up to', townLevel
+                #print 'Town leveled up to', townLevel
         if turn > turnsPerDay:
             turn = 1
             day += 1
@@ -68,9 +68,9 @@ def main():
             adventurers.append(Adventurer("Fred" + str(day) + str(turn),
                                           level))
 
+    """
     print "Shit bro.... Your village is burning, your maidens are raped and your children are murdered"
     def chunks(l, n):
-        """Yield successive n-sized chunks from l."""
         for i in xrange(0, len(l), n):
             yield l[i:i+n]
     import pprint
@@ -86,14 +86,16 @@ def main():
                 levelCounts.append(str(levelsDay.count(level)))
             print ', '.join(levelCounts)
 
-    print 'Town is at level', townLevel
-
     print 'Area counters'
     for name, area in areas.iteritems():
         print name, area.usedCounter
+    """
 
-    print 'Number of adventurers', len(adventurers)
-    print 'Average adventurer level',\
+    #print 'Town is at level', townLevel
+    #print 'Number of adventurers', len(adventurers)
+    #print 'Average adventurer level',\
+    #    sum([a.level for a in adventurers]) * 1.0 / len(adventurers)
+    print townLevel, len(adventurers),\
         sum([a.level for a in adventurers]) * 1.0 / len(adventurers)
 
 
